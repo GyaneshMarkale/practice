@@ -1,6 +1,8 @@
 package JAVA.Inheritance;
 
-public class Animal {
+import javax.smartcardio.ATR;
+
+class Animal {
     private String sound;
     private int limbs;
 
@@ -34,5 +36,14 @@ class Lion extends Animal {
     {
         System.out.println("Roar");
         return null;
+    }
+}
+
+public class MainClass {
+    public static void main(String[] args)
+    {
+        Animal a = new Dog();
+        String sound = a.getSound();
+        System.out.println(sound);
     }
 }

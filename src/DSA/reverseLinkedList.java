@@ -1,9 +1,5 @@
 package DSA;
 
-import org.w3c.dom.Node;
-
-import java.util.List;
-
 class ListNode {
     int val;
     ListNode next;
@@ -14,7 +10,7 @@ class ListNode {
     }
 }
 
-public class Oracle {
+public class reverseLinkedList {
     public static void main(String[] args)
     {
         ListNode node = null;

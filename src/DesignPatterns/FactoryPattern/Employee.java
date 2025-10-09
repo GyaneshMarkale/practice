@@ -1,4 +1,5 @@
 package DesignPatterns.FactoryPattern;
 
-public class Employee {
+public interface Employee {
+    int getSalary();
 }

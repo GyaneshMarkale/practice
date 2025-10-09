@@ -1,4 +1,5 @@
-package DesignPatterns.ObserverPattern;
+package DesignPatterns.ObserverPattern.StoreNotification;
 
 public class NotificationSystem {
+
 }

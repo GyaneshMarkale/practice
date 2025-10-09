@@ -166,14 +166,6 @@ public class stream_pract2 {
          System.out.println(outMap);
 
 
-//         Given two maps with String keys and integer values
-//         merge them into single map with summing values of duplicate keys
-//        Map<String, >
-
-        //Get the Longest String = null with java 8 -
-        List<String> res1= new ArrayList<>(Arrays.asList("GFG", "Rahul", "Image", "Employee", "EmployeeDocuments"));
-        String out = res1.stream().max(Comparator.comparing(String::length)).get();
-        System.out.println(out);
 
         String ss1 = "John";
         String ss2 = new String ("John");

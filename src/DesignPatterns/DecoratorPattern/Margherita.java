@@ -1,9 +1,8 @@
 package DesignPatterns.DecoratorPattern;
 
-public class Margritta extends BasePizza{
-    public int cost()
-    {
+public class Margherita extends BasePizza{
+    @Override
+    public int cost() {
         return 100;
     }
-
 }

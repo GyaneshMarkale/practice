@@ -1,5 +1,6 @@
+package DSA;
+
 import java.util.*;
-import java.util.stream.Gatherer;
 
 /**
  *  {1, 4, 0, 8, 2}
@@ -9,7 +10,7 @@ import java.util.stream.Gatherer;
  *  }
  */
 // 8 4 1
-public class Solution {
+public class NGE {
     public static void main(String [] args)
     {
         int[] arr  = {1, 4, 0, 8, 2};

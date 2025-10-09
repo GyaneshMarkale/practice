@@ -8,10 +8,13 @@ public class Executorpractice {
         int numberOfThreads = Runtime.getRuntime().availableProcessors();// via number of cores
         System.out.println("number of cores available: "+numberOfThreads);
 
-        ExecutorService es = Executors.newFixedThreadPool(numberOfThreads);
+        //ExecutorService es = Executors.newFixedThreadPool(numberOfThreads);
+        //ExecutorService es = Executors.newCachedThreadPool();
+        ScheduledThreadPoolExecutor es = (ScheduledThreadPoolExecutor) Executors.newScheduledThreadPool(10);
+
 
         for (int i = 0; i < 100; i++) {
-            es.submit(new Task());
+            es.scheduleWithFixedDelay(new Task(), 14,10, TimeUnit.SECONDS);
         }
         es.shutdown();
         if (es.isShutdown())

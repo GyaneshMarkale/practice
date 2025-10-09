@@ -11,7 +11,7 @@ class Node{
         this.val = val;
     }
 }
-public class GSTest {
+public class LinkedList {
     public static void main(String[] args)
     {
         Node node = null;
@@ -64,6 +64,8 @@ public class GSTest {
 
 // 1 - 2
 // 2 -> null
+
+// 1 -> 2 -> null
 
 
 

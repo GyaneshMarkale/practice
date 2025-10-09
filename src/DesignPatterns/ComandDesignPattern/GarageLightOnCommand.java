@@ -1,9 +1,9 @@
 package DesignPatterns.ComandDesignPattern;
 
-public class GarageCommand implements Command{
+public class GarageLightOnCommand implements Command{
     Garage garage;
 
-    public GarageCommand(Garage garage) {
+    public GarageLightOnCommand(Garage garage) {
         this.garage = garage;
     }
 

@@ -1,63 +1,65 @@
 package Multithreading;
 
-public class EvenOddMultiThread {
-    private static final Object lock = new Object();
-    private static int current = 1;
-    private static final int maxNumber = 50;
+import com.sun.jdi.ThreadGroupReference;
 
-    public static void main(String args[])
+import java.util.Map;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+public class EvenOddMultiThread {
+    private static ReentrantReadWriteLock LOCK = new ReentrantReadWriteLock();
+    private static int CURRENT = 1;
+    private static final int MAX_ELEMENT = 50;
+    public static void main (String [] args)
     {
         Thread t1 = new Thread(() -> {
-            while (current <= maxNumber)
-            {
-                synchronized (lock)
-                {
-                    if (current % 2 == 0)
-                    {
-                        System.out.print(" "+current);
-                        current++;
-                        lock.notify();
-                    }
-                    else {
-                        try
-                        {
-                            lock.wait();
-                        }
-                        catch (InterruptedException e)
-                        {
-                            Thread.currentThread().interrupt();
-                        }
-                    }
-                }
-            }
+           while (CURRENT <= MAX_ELEMENT)
+           {
+               synchronized (LOCK)
+               {
+                   if(CURRENT % 2 == 0)
+                   {
+                       Thread.currentThread().setName("evenThread");
+                       System.out.println(CURRENT+": "+Thread.currentThread().getName());
+                       CURRENT++;
+                       LOCK.notify();
+                   }
+                   else
+                   {
+                       try
+                       {
+                           LOCK.wait();
+                       }
+                       catch (InterruptedException ex)
+                       {
+                           System.out.println("Something went wrong "+ex);
+                       }
+                   }
+               }
+           }
         });
+
         Thread t2 = new Thread(() -> {
-            while (current <= maxNumber)
-            {
-                synchronized (lock)
-                {
-                    if (current % 2 != 0)
-                    {
-                        System.out.print(" "+current);
-                        current++;
-                        lock.notify();
-                    }
-                    else {
-                        try
-                        {
-                            lock.wait();
-                        }
-                        catch (InterruptedException e)
-                        {
-                            Thread.currentThread().interrupt();
-                        }
-                    }
-                }
-            }
+           while (CURRENT <= MAX_ELEMENT)
+           {
+               synchronized (LOCK) {
+                   if (CURRENT % 2 == 1) {
+                       Thread.currentThread().setName("oddThread");
+                       System.out.println(CURRENT + ": " + Thread.currentThread().getName());
+                       CURRENT++;
+                       LOCK.notify();
+                   } else {
+                       try {
+                           LOCK.wait();
+                       } catch (InterruptedException ex) {
+                           System.out.println(ex);
+                       }
+                   }
+               }
+           }
         });
         t1.start();
         t2.start();
+
     }
-
-
 }

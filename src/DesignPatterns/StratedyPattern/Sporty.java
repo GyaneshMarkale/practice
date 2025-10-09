@@ -1,4 +1,7 @@
 package DesignPatterns.StratedyPattern;
 
-public class Sporty {
+public class Sporty extends Vehicle{
+    public Sporty(DriveStrategy driveStrategy) {
+        super(driveStrategy);
+    }
 }

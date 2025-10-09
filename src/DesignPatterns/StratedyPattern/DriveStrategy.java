@@ -1,4 +1,5 @@
 package DesignPatterns.StratedyPattern;
 
-public class DriveStrategy {
+public interface DriveStrategy {
+    public void drive();
 }

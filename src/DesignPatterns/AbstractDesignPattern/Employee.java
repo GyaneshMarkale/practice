@@ -1,4 +1,6 @@
 package DesignPatterns.AbstractDesignPattern;
 
-public class Employee {
+public interface Employee {
+    int getSalary();
+    String getName();
 }

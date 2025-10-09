@@ -3,7 +3,7 @@ package DSA;
 import java.util.Stack;
 
 // LeetCode - 394
-public class DecodeString {
+public class DecodeStringLeetCode {
     public static void main(String[] args)
     {
         System.out.println(decodeString("3[a]2[bc]"));

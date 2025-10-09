@@ -1,4 +1,5 @@
 package DesignPatterns.AbstractDesignPattern;
 
-public class AbstractEmployeeFactory {
+public abstract class AbstractEmployeeFactory {
+    public abstract Employee createEmployee();
 }

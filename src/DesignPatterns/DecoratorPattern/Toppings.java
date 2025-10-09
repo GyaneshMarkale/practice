@@ -1,4 +1,5 @@
 package DesignPatterns.DecoratorPattern;
 
-public class Toppings {
+public abstract class Toppings extends BasePizza{
+
 }

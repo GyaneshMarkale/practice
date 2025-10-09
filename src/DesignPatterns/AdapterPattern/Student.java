@@ -1,4 +1,7 @@
 package DesignPatterns.AdapterPattern;
 
-public class Student {
+public interface Student {
+    public String getFirstname();
+    public String getSurname();
+    public String getAddress();
 }
