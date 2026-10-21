@@ -1,0 +1,17 @@
+learning:
+  service:
+    environment: test
+    max-items: 5
+    request-timeout: 500ms
+  banner:
+    enabled: true
+    message: Test profile banner
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: never
