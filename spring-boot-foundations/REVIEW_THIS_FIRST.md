@@ -1,6 +1,6 @@
 # Review This First — Spring Boot Foundations
 
-This folder is prepared for review and is **not being pushed to GitHub yet**.
+This project is published at `https://github.com/GyaneshMarkale/practice/tree/main/spring-boot-foundations`. Review the code and run the tests locally before treating it as verified; Maven tests have not yet been executed in the preparation environment.
 
 Read in this order:
 
@@ -13,6 +13,6 @@ Read in this order:
 7. `docs/INTERVIEW_QUESTIONS_MODULE_02.md` — self-test.
 8. `docs/TEST_RUN_LOG.md` — paste real test/run output here after testing.
 
-Then run `mvn clean test`, start the app locally, inspect the outputs, and decide whether you want any changes before publishing.
+Then run `mvn clean test`, start the app locally, inspect the outputs, and decide whether any changes are needed. Commit review fixes to the same project folder.
 
 Important verification note: the files were generated and statically inspected in the preparation environment. Maven is not installed in that environment, so the Maven tests have not been executed there. The project must be built and tested on a machine with JDK 21, Maven, and dependency-repository access before we call it verified.
