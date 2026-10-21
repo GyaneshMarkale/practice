@@ -1,6 +1,6 @@
 # Test Run Log
 
-Use this file to record actual test and runtime evidence before publishing the repository.
+Use this file to record actual test and runtime evidence. The project is published; keep this log updated before describing the project as verified.
 
 ## Environment
 
