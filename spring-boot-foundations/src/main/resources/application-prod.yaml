@@ -1,0 +1,21 @@
+server:
+  # Example container-friendly binding. Restrict access through the deployment network/firewall.
+  address: \${SERVER_ADDRESS:0.0.0.0}
+
+learning:
+  service:
+    environment: \${LEARNING_SERVICE_ENVIRONMENT:production}
+    max-items: \${LEARNING_SERVICE_MAX_ITEMS:20}
+    request-timeout: \${LEARNING_SERVICE_REQUEST_TIMEOUT:2s}
+    features-enabled: \${LEARNING_SERVICE_FEATURES_ENABLED:false}
+  banner:
+    enabled: \${LEARNING_BANNER_ENABLED:false}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
