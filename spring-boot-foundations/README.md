@@ -2,7 +2,7 @@
 
 A step-by-step Spring Boot learning project for Java backend and SDE-II/SDE-III interviews. It begins with IoC/DI study notes and adds a runnable service for configuration, profiles, validation, Actuator, startup analysis and conditional configuration.
 
-> **Review status:** this project has been created locally for review. It has not been pushed to GitHub. The current preparation container has Java 21 but no Maven installation and no access to dependency repositories, so the Maven build/tests have not been executed here. Run the commands below on a Maven-enabled machine and record the actual output before publishing.
+> **Publication and verification status:** the source and learning files are published in this public repository. Maven build/tests have not been executed in the preparation environment because Maven is unavailable here and dependency repositories could not be reached. Run the commands below on a Maven-enabled machine and record actual output in `docs/TEST_RUN_LOG.md` before treating the project as verified.
 
 ## Version
 
