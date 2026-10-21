@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: spring-boot-foundations
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+
+server:
+  # Safe local default; the prod profile can override this for a container network.
+  address: \${SERVER_ADDRESS:127.0.0.1}
+  port: \${PORT:8080}
+  shutdown: graceful
+
+learning:
+  service:
+    name: Spring Boot Foundations
+    environment: default
+    max-items: 20
+    request-timeout: 2s
+    features-enabled: true
+  banner:
+    enabled: true
+    message: Learn by observing the framework
+
+management:
+  endpoints:
+    web:
+      # Minimal default exposure. The local profile expands this for learning only.
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: \${spring.application.name}
+
+info:
+  app:
+    name: \${spring.application.name}
+    description: Spring Boot configuration and startup learning service
+    version: 0.1.0-SNAPSHOT
