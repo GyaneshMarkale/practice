@@ -1,0 +1,23 @@
+server:
+  address: 127.0.0.1
+
+learning:
+  service:
+    environment: local
+    max-items: 10
+    request-timeout: 1s
+  banner:
+    enabled: true
+    message: Local learning banner is enabled
+
+management:
+  endpoints:
+    web:
+      # Local-only diagnostics. Do not copy this exposure list to production.
+      exposure:
+        include: health,info,metrics,conditions,configprops,beans
+  endpoint:
+    health:
+      show-details: always
+    configprops:
+      show-values: never
