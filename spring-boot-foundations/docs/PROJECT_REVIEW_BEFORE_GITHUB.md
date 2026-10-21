@@ -1,6 +1,6 @@
-# Project Review Before GitHub Publication
+# Project Review — Spring Boot Foundations
 
-**Status:** prepared locally for user review. Do not publish until the owner has reviewed the code, documentation, dependency versions, and test output.
+**Status:** the source and learning documents have been published for review. Maven tests and runtime checks remain unverified; complete the checklist below locally before describing the project as verified.
 
 ## What the project is
 
@@ -56,7 +56,7 @@ Do not treat the sample production profile as a complete deployment-hardening so
 - `LearningServicePropertiesValidationTest`: checks Jakarta Bean Validation constraints.
 - `GreetingControllerIntegrationTest`: loads a mock web context with the `test` profile and checks HTTP mapping, configuration binding and response values.
 
-## Review concerns to check before publication
+## Local verification and post-publication review checklist
 
 - [ ] Run with the project's JDK 21 and Maven version.
 - [ ] Run `mvn clean test` and capture the real summary; don't claim build success until the command succeeds on a network-enabled Maven environment.
@@ -66,7 +66,7 @@ Do not treat the sample production profile as a complete deployment-hardening so
 - [ ] Confirm no secret values or personal machine paths have been committed.
 - [ ] Verify Spring Boot 4.1.1 is an intentional choice for the learning repo and Java 21 is available in the target environment.
 - [ ] Read and edit the learning documents to match what was actually observed.
-- [ ] Inspect `git diff` before pushing; include only files intended for public viewing.
+- [ ] Inspect `git diff` before the next commit; include only files intended for public viewing.
 
 ## Honest verification status for this artifact
 
